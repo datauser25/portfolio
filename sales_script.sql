@@ -6,7 +6,7 @@ FROM salesdata.`sales_data_sample 2`;
 select distinct YEAR_ID
 FROM salesdata.`sales_data_sample 2`;
 
--- grouping sales by the producsts
+-- grouping sales by the products 
 
 select PRODUCTLINE, sum(round(sales)) as revenue
 from salesdata.`sales_data_sample 2`
@@ -23,7 +23,7 @@ from salesdata.`sales_data_sample 2`
 group by 1
 order by 2 desc;
 
--- figuring out the most prfitable month in each year
+-- figuring out the most profitable month in each year
 
 select  MONTH_ID, sum(sales) Revenue, count(ORDERNUMBER) Frequency, YEAR_ID
 from salesdata.`sales_data_sample 2`
